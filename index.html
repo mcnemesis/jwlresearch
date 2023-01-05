@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JWL RESEARCH PORTFOLIO</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    @property --rotate {
+      syntax: "<angle>";
+      initial-value: 132deg;
+      inherits: false;
+    }
+
+    :root {
+      --card-height: 65vh;
+      --card-width: calc(var(--card-height) / 1.5);
+    }
+
+
+    body {
+      min-height: 100vh;
+      background: black;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      box-sizing: border-box;
+    }
+
+
+    .card {
+      background: #191c29;
+      width: var(--card-width);
+      height: var(--card-height);
+      padding: 3px;
+      position: relative;
+      border-radius: 6px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      font-size: 1.5em;
+      color: rgb(88 199 250 / 30%);
+      cursor: pointer;
+      font-family: monospace;
+    }
+
+    .card:hover {
+      color: rgb(88 199 250 / 100%);
+      transition: color 1s;
+    }
+
+    .card:hover:before,
+    .card:hover:after {
+      animation: none;
+      opacity: 0;
+    }
+
+
+    .card::before {
+      content: "";
+      width: 104%;
+      height: 102%;
+      border-radius: 8px;
+      background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+      position: absolute;
+      z-index: -1;
+      top: -1%;
+      left: -2%;
+      animation: spin 2.5s linear infinite;
+    }
+
+    .card::after {
+      position: absolute;
+      content: "";
+      top: calc(var(--card-height) / 6);
+      left: 0;
+      right: 0;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+      transform: scale(0.8);
+      filter: blur(calc(var(--card-height) / 6));
+      background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+      opacity: 1;
+      transition: opacity .5s;
+      animation: spin 2.5s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        --rotate: 0deg;
+      }
+
+      100% {
+        --rotate: 360deg;
+      }
+    }
+
+    a {
+      color: #212534;
+      text-decoration: none;
+      font-family: sans-serif;
+      font-weight: bold;
+      margin-top: 2rem;
+    }
+
+    .bag {
+      width: 90vw;
+    }
+
+    .card {
+      margin-top: 5vh;
+      height: 80vh !important;
+    }
+
+    .card-body {
+      width: inherit;
+    }
+
+    .card-footer {
+      padding-top: 25px;
+      font-size: small;
+    }
+
+    .doc {
+      height: 100%
+    }
+
+    #matrix {
+      z-index: -10;
+      position: absolute !important;
+      top: 0vh;
+      left: 0;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.min.js"></script>
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="bag mx-auto">
+    <div class="container">
+      <div class="">
+
+        <div class="card w-100">
+          <div class="card-header">
+            DNAP Dynamic Nuchwezi Architecture Platform A New Software Extension and Construction Technology (2020)
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Computer Science</h5>
+
+            <div class="doc">
+              <iframe class="scribd_iframe_embed" title="DNAP -- Latest Paper"
+                src="https://www.scribd.com/embeds/513500906/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-H4IvErjrxj6sqtoHM4D5"
+                data-auto-height="false" data-aspect-ratio="0.7729220222793488" scrolling="no" id="doc_69571"
+                width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+
+          </div>
+          <div class="card-footer text-muted">
+            The second authoritative paper on DNAP, the new software engineering platform for LNC software development
+            targeting
+            mobile and web.
+          </div>
+        </div>
+
+        <div class="card w-100">
+          <div class="card-header">
+            Stories of Flying Men (2022)
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Visual Literature</h5>
+
+            <div class="doc">
+              <iframe class="scribd_iframe_embed" title="Story Comic"
+                src="https://www.scribd.com/embeds/618020686/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-H4IvErjrxj6sqtoHM4D5"
+                data-auto-height="false" data-aspect-ratio="0.7729220222793488" scrolling="no" id="doc_69571"
+                width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+
+          </div>
+          <div class="card-footer text-muted">
+            A one-page no-text story-telling comic
+          </div>
+        </div>
+
+        <div class="card w-100">
+          <div class="card-header">
+            Druid Calligraphy (2019)
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Cryptography</h5>
+
+            <div class="doc">
+              <iframe class="scribd_iframe_embed" title="Story Comic"
+                src="https://www.scribd.com/embeds/618034149/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-H4IvErjrxj6sqtoHM4D5"
+                data-auto-height="false" data-aspect-ratio="0.7729220222793488" scrolling="no" id="doc_69571"
+                width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+
+          </div>
+          <div class="card-footer text-muted">
+            Explorations of a kind of visual encryption method using a ring cipher and an esoteric hand.
+          </div>
+        </div>
+
+        <div class="card w-100">
+          <div class="card-header">
+            Cubes From Space (2020)
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Visual Literature</h5>
+
+            <div class="doc">
+              <iframe class="scribd_iframe_embed" title="Cubes from Space"
+                src="https://www.scribd.com/embeds/618035420/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-H4IvErjrxj6sqtoHM4D5"
+                data-auto-height="false" data-aspect-ratio="0.7729220222793488" scrolling="no" id="doc_69571"
+                width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+
+          </div>
+          <div class="card-footer text-muted">
+            Thinking of a global raid by space-originated unmanned craft with science experiment payloads and
+            autonomous motion capabilities.
+          </div>
+        </div>
+
+
+        <div class="card w-100">
+          <div class="card-header">
+            GTNC: A General Theory of Number Cardinality (2021)
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Mathematics</h5>
+
+            <div class="doc">
+              <iframe class="scribd_iframe_embed" title="GTNC"
+                src="https://www.scribd.com/embeds/618038149/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-H4IvErjrxj6sqtoHM4D5"
+                data-auto-height="false" data-aspect-ratio="0.7729220222793488" scrolling="no" id="doc_69571"
+                width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+
+          </div>
+          <div class="card-footer text-muted">
+            This work explores the idea of expressing numbers as polynomials in their base. It uses this idea to
+            establish the
+            concept of the cardinality of a number, and uses this to establish several important, practical theorems
+            about the
+            cardinality of numbers in any base. The four basic arithmetic operations of addition, subtraction,
+            multiplication and
+            division are given special treatment, and the limits on the cardinality of the result of applying any of
+            them to two
+            numbers — pure or pure fractional, succinctly established.
+          </div>
+        </div>
+
+        <div class="card w-100">
+          <div class="card-header">
+            Adventures in Architecture (2022)
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Architecture</h5>
+
+            <div class="doc">
+              <iframe class="scribd_iframe_embed" title="Cubes from Space"
+                src="https://www.scribd.com/embeds/618039359/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-H4IvErjrxj6sqtoHM4D5"
+                data-auto-height="false" data-aspect-ratio="0.7729220222793488" scrolling="no" id="doc_69571"
+                width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+
+          </div>
+          <div class="card-footer text-muted">
+            Explorations in sketch, of various architectural design concepts for a client with a wild taste and lots of
+            room to
+            explore for their dream crib.
+          </div>
+        </div>
+
+        <div class="card w-100">
+          <div class="card-header">
+            Computer Science Research Ideas (2022)
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Computer Science</h5>
+
+            <div class="doc">
+              <iframe class="scribd_iframe_embed" title="CS Research"
+                src="https://www.scribd.com/embeds/618040414/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-H4IvErjrxj6sqtoHM4D5"
+                data-auto-height="false" data-aspect-ratio="0.7729220222793488" scrolling="no" id="doc_69571"
+                width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+
+          </div>
+          <div class="card-footer text-muted">
+            A collection of research ideas suitable for a graduate or undergraduate computer science student researcher.
+          </div>
+        </div>
+
+
+        <div class="card w-100">
+          <div class="card-header">
+            RESEARCH PAPER Sketch -- Directory Services (2022)
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Computer Science</h5>
+
+            <div class="doc">
+              <iframe class="scribd_iframe_embed" title="CS Research"
+                src="https://www.scribd.com/embeds/618041219/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-H4IvErjrxj6sqtoHM4D5"
+                data-auto-height="false" data-aspect-ratio="0.7729220222793488" scrolling="no" id="doc_69571"
+                width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+
+          </div>
+          <div class="card-footer text-muted">
+            Sketch of a Research Paper on Directory Services in Computing.
+          </div>
+        </div>
+
+        <div class="card w-100">
+          <div class="card-header">
+            Game Design Explorations (2022)
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Computer Science</h5>
+
+            <div class="doc">
+              <iframe class="scribd_iframe_embed" title="Game Design"
+                src="https://www.scribd.com/embeds/618041850/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-H4IvErjrxj6sqtoHM4D5"
+                data-auto-height="false" data-aspect-ratio="0.7729220222793488" scrolling="no" id="doc_69571"
+                width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+
+          </div>
+          <div class="card-footer text-muted">
+            A sketch of a research project around mobile game design for a client.
+          </div>
+        </div>
+
+        <div class="card w-100">
+          <div class="card-header">
+            PROJECT VOSA Proposal (2022)
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Software Engineering</h5>
+
+            <div class="doc">
+              <iframe class="scribd_iframe_embed" title="Game Design"
+                src="https://www.scribd.com/embeds/618042848/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-H4IvErjrxj6sqtoHM4D5"
+                data-auto-height="false" data-aspect-ratio="0.7729220222793488" scrolling="no" id="doc_69571"
+                width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+
+          </div>
+          <div class="card-footer text-muted">
+            A graduate level research proposal on conversational artificial assistant technologies.
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <!-- partial -->
+
+    <canvas id="matrix"></canvas>
+    <script type="text/javascript">
+      var matrix = document.getElementById("matrix");
+      var context = matrix.getContext("2d");
+      matrix.height = window.innerHeight;
+      matrix.width = window.innerWidth;
+      var drop = [];
+      var font_size = 16;
+      var columns = matrix.width / font_size;
+      for (var i = 0; i < columns; i++)
+        drop[i] = 1;
+
+      function drawMatrix() {
+
+        context.fillStyle = "rgba(0, 0, 0, 0.1)";
+        context.fillRect(0, 0, matrix.width, matrix.height);
+
+        // context.fillStyle="green";
+        context.fillStyle = randomColor();
+        context.font = font_size + "px";
+        for (var i = 0; i < columns; i++) {
+          context.fillText(Math.floor(Math.random() * 2), i * font_size, drop[i] * font_size);/*get 0 and 1*/
+
+          if (drop[i] * font_size > (matrix.height * 2 / 3) && Math.random() > 0.85)/*reset*/
+            drop[i] = 0;
+          drop[i]++;
+        }
+      }
+      setInterval(drawMatrix, 40);
+    </script>
+</body>
+
+</html>
